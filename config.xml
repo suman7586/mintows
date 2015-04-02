@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "org.coenraets.employeedirectory"
+        versionCode="10"
+        version   = "1.1.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Mintows</name>
+
+    <description>
+        A simple application
+    </description>
+
+    <author href="http://wrctechnologies.com" email="suman.wrc@gmail.com">
+        Suman Chakraborty
+    </author>
+    <preference name="permissions" value="none"/>
+    <feature name="http://api.phonegap.com/1.0/camera"/>
+    <feature name="http://api.phonegap.com/1.0/contacts"/>
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.media-capture" />
+    <gap:plugin name="org.apache.cordova.contacts" />
+</widget>
