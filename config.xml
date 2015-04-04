@@ -16,7 +16,7 @@
     <author href="http://wrctechnologies.com" email="suman.wrc@gmail.com">
         Suman Chakraborty
     </author>
-    <preference name="permissions" value="none"/>
+    <access origin="*" />
     <feature name="http://api.phonegap.com/1.0/camera"/>
     <feature name="http://api.phonegap.com/1.0/contacts"/>
     <gap:plugin name="org.apache.cordova.camera" />

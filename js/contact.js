@@ -39,27 +39,30 @@ jQuery(function() {
       jQuery("input#captcha").focus();
       return false;
     }
-		var dataString = 'name='+ name + '&email=' + email + '&subject=' + subject + '&msg=' + msg+'&captcha=' + captcha;
+		var dataString = 'name='+ name + '&email=' + email + '&subject=' + subject + '&msg=' + msg;
 		//alert (dataString);return false;
 		
 	  jQuery.ajax({
       type: "POST",
-      url: "process.php",
+      url: "http://wrctec.com/androidApi/mintowsAPI/process.php",
       data: dataString,
       success: function(response) {
-          
-          if(response==1){
-              message='We will be in touch soon';
-          }else if(response.length>1){
-              message=response+ " please try again";
+          var json=jQuery.parseJSON(response);
+          if(json.code==100){
+              //message='We will be in touch soon';
+              message=json.msg;
+              
+          }else{
+              //message=response+ " please try again";
+              message=json.msg;
           }
-        jQuery('#contactform').html("<div id='message'></div>");
-        jQuery('#message').html("<strong>Contact Form Submitted!</strong>")
-        .append("<p>"+message+"</p>")
-        .hide()
-        .fadeIn(1500, function() {
-          jQuery('#message');
-        });
+                jQuery('#contactform').html("<div id='message'></div>");
+                jQuery('#message').html("<strong>Contact Form Submitted!</strong>")
+                .append("<p>"+message+"</p>")
+                .hide()
+                .fadeIn(1500, function() {
+                  jQuery('#message');
+                });
       }
      });
     return false;
