@@ -17,9 +17,5 @@
         Suman Chakraborty
     </author>
     <access origin="*" />
-    <feature name="http://api.phonegap.com/1.0/camera"/>
-    <feature name="http://api.phonegap.com/1.0/contacts"/>
-    <gap:plugin name="org.apache.cordova.camera" />
-    <gap:plugin name="org.apache.cordova.media-capture" />
-    <gap:plugin name="org.apache.cordova.contacts" />
+    
 </widget>
